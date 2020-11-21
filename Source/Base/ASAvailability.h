@@ -99,10 +99,6 @@
         #define AS_PIN_REMOTE_IMAGE 1
     #endif
 
-    #ifndef AS_IG_LIST_KIT
-        #define AS_PIN_REMOTE_IMAGE 0
-    #endif
-
     #ifndef AS_IG_LIST_DIFF_KIT
         #define AS_IG_LIST_DIFF_KIT 0
     #endif

@@ -8,8 +8,6 @@
 //
 
 #import "ASAvailability.h"
-
-#if AS_PIN_REMOTE_IMAGE
 #import "ASPINRemoteImageDownloader.h"
 
 #import "ASAssert.h"
@@ -401,4 +399,3 @@ static dispatch_once_t shared_init_predicate;
 }
 
 @end
-#endif

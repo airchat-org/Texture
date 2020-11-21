@@ -8,9 +8,6 @@
 //
 
 #import "ASAvailability.h"
-
-#if AS_PIN_REMOTE_IMAGE
-
 #import "ASImageProtocols.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -76,5 +73,3 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-
-#endif

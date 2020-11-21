@@ -19,10 +19,7 @@
 #import "ASImageNode+AnimatedImagePrivate.h"
 #import "ASImageContainerProtocolCategories.h"
 #import "ASNetworkImageLoadInfo+Private.h"
-
-#if AS_PIN_REMOTE_IMAGE
 #import "ASPINRemoteImageDownloader.h"
-#endif
 
 @interface ASNetworkImageNode ()
 {
@@ -110,11 +107,7 @@ static std::atomic_bool _useMainThreadDelegateCallbacks(true);
 
 - (instancetype)init
 {
-#if AS_PIN_REMOTE_IMAGE
   return [self initWithCache:[ASPINRemoteImageDownloader sharedDownloader] downloader:[ASPINRemoteImageDownloader sharedDownloader]];
-#else
-  return [self initWithCache:nil downloader:[ASBasicImageDownloader sharedImageDownloader]];
-#endif
 }
 
 - (void)dealloc
